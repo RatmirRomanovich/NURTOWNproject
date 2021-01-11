@@ -79,14 +79,25 @@ body {
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
-@import "datepicker";
-@import "lightgallery";
-@import "tippy";
-@import "nouislider";
-@import "popup";
+// @import "datepicker";
+// @import "lightgallery";
+// @import "tippy";
+// @import "nouislider";
+// @import "popup";
 @import "header";
+
 @import "footer";
+
 @import "home";
+
+@import "galleryPage";
+
+@import "projectPage";
+
+@import "certificatesPage";
+
+@import "contactsPage";
+
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
@@ -94,19 +105,19 @@ body {
 	flex: 1 1 auto;
 	padding: 100px 30px 30px 30px;
 	display: flex;
-	// .page__side
-	&__side {
-		flex: 0 0 300px;
-		padding: 0px 20px 0px 0px;
-	}
-	// .page__item
-	&__item {
-	}
-	// .page__body
-	&__body {
-		flex: 1 1 auto;
-		min-width: 0;
-	}
+	// // .page__side
+	// &__side {
+	// 	flex: 0 0 300px;
+	// 	padding: 0px 20px 0px 0px;
+	// }
+	// // .page__item
+	// &__item {
+	// }
+	// // .page__body
+	// &__body {
+	// 	flex: 1 1 auto;
+	// 	min-width: 0;
+	// }
 }
 //===================================================================================================================================
 
