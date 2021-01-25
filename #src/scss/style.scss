@@ -5,6 +5,7 @@
 //<ШРИФТЫ>===============================================================================================
 
 //<Подключаем шрифты>=======================================================================================
+
 //&display=swap&subset=cyrillic-ext
 @import "fonts";
 //</Подключаем шрифты>=======================================================================================
@@ -14,34 +15,41 @@
 //</Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontFamily: "";
+$fontFamily: "Hoves";
 //</Шрифт по умолчанию>==========================================================================================
 
 //</ШРИФТЫ>=======================================================================================================
 
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
-$minWidth: 320px;
-$maxWidth: 1920;
-$maxWidthContainer: 1170;
-$md1: $maxWidthContainer + 12;
-$md2: 991.98;
-$md3: 767.98;
-$md4: 479.98;
+@import "var";
+// @media (min-width: $md2 + px){
+// 	&:hover {
+// 		&::before {
+// 			width: 100%;
+// 		}
+
+// 		&::after {
+// 			width: 100%;
+// 		}
+// 	}
+// }
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
+
 body {
 	color: #000;
 	font-size: 20px;
-	line-height: 150%;
-	background-color: #333;
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	color: #fff;
+	font-weight: $fontWeightLight;
+	line-height: 1.2;
+	background-color: $background-primary-section;
+
 	&._lock {
 		overflow: hidden;
 	}
 }
+
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 
 //<ОБОЛОЧКА>===========================================================================================================
@@ -51,30 +59,143 @@ body {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	&._loaded {
-	}
+
+	&._loaded {}
 }
+
 //</ОБОЛОЧКА>===========================================================================================================
 
-//<ОСНОВНАЯ СЕТКА>===========================================================================================================
-._container {
-	max-width: $maxWidthContainer + px;
+//<Общии стили>===========================================================================================================
+.container {
+	max-width: $maxWidthContainer + 20 + px;
+	padding: 0px 10px 120px;
 	margin: 0 auto;
-	@media (max-width: $md1+px) {
-		max-width: 970px;
+	// @media (max-width: $md1+px) {
+	// 	max-width: 970px;
+	// }
+	// @media (max-width: $md2+px) {
+	// 	max-width: 750px;
+	// }
+	// @media (max-width: $md3+px) {
+	// 	max-width: none;
+	// 	padding: 0 10px;
+	// }
+}
+
+a {
+	color: inherit;
+	font-family: inherit;
+}
+
+.page {
+	flex: 1 1 auto;
+}
+
+//title-subtitle
+.title {
+	font-weight: $fontWeightExtraLight;
+	font-size: 64px;
+	line-height: 1;
+	color: $palette-primary-title;
+}
+
+.title__span {
+	font-weight: $fontWeightDemiBold;
+	color: $palette-secondary-title;
+}
+
+.subtitle {
+	font-weight: $fontWeightExtraLight;
+	font-size: 64px;
+	line-height: 1;
+	color: $palette-primary-title;
+	margin-bottom: $margin-primary-subtitle;
+}
+
+//button
+.button-link {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	background-color: $background-primary-button;
+	justify-content: center;
+	padding: 30px 65px;
+	margin: 0px -8px;
+	transition: all .3s;
+
+	font-weight: $fontWeightLight;
+	font-size: 12px;
+	line-height: 12px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+
+	& span {
+		padding: 0px 8px;
 	}
-	@media (max-width: $md2+px) {
-		max-width: 750px;
-	}
-	@media (max-width: $md3+px) {
-		max-width: none;
-		padding: 0 10px;
+
+	&:hover {
+		background: $palette-primary-button-hover;
 	}
 }
-//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+.button-link__span {}
+
+.button-link__span-bg {
+	width: 18px;
+	height: 9px;
+	background: transparent url('../img/icons/arrowGray.svg') center center no-repeat;
+}
+
+
+.button-link--black {
+	padding: 30px 39px;
+	background-color: $background-secondary-button;
+
+	& span {
+		color: #fff;
+	}
+
+	& .button-link__span-bg {
+		width: 18px;
+		height: 9px;
+		background: transparent url('../img/icons/arrow.svg') center center no-repeat;
+	}
+
+	&:hover {
+		background: darken($palette-primary-button-hover, 50%);
+	}
+}
+
+// .button-link {
+// 	display: inline-block;
+// 	cursor: pointer;
+// 	font-size: 12px;
+// 	line-height: 12px;
+// 	letter-spacing: 0.2em;
+// 	text-transform: uppercase;
+// 	color: #333333;
+// 	background-color: #fff;
+// 	transition: all .5s;
+// 	padding: 30px 65px;
+
+// 	&:hover {
+// 		letter-spacing: 0.3em;
+// 	}
+
+// 	& .button-link-icon {
+// 		position: relative;
+// 		right: -7px;
+// 	}
+
+// 	&:hover .button-link-icon {
+// 		transform: translate3d(4px, 0, 0);
+// 	}
+// }
+
+//</Общии стили>===========================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
-@import "forms";
+// @import "forms";
 @import "ui";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 
@@ -82,7 +203,7 @@ body {
 // @import "datepicker";
 // @import "lightgallery";
 // @import "tippy";
-// @import "nouislider";
+@import "nouislider";
 // @import "popup";
 @import "header";
 
@@ -99,174 +220,3 @@ body {
 @import "contactsPage";
 
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
-
-//<ОСНОВНОЙ БЛОК>====================================================================================================
-.page {
-	flex: 1 1 auto;
-	padding: 100px 30px 30px 30px;
-	display: flex;
-	// // .page__side
-	// &__side {
-	// 	flex: 0 0 300px;
-	// 	padding: 0px 20px 0px 0px;
-	// }
-	// // .page__item
-	// &__item {
-	// }
-	// // .page__body
-	// &__body {
-	// 	flex: 1 1 auto;
-	// 	min-width: 0;
-	// }
-}
-//===================================================================================================================================
-
-.tabs-block {
-	margin: 0px 0px 50px 0px;
-	// .tabs-block__nav
-	&__nav {
-		display: flex;
-		margin: 0px -2px;
-	}
-	// .tabs-block__item
-	&__item {
-		flex: 0 1 33.333%;
-		margin: 0px 2px;
-		background-color: #7a956b;
-		padding: 20px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		cursor: pointer;
-		&._active {
-			background-color: #77608d;
-		}
-	}
-	// .tabs-block__body
-	&__body {
-		padding: 20px 0px 0px 0px;
-	}
-	// .tabs-block__block
-	&__block {
-	}
-}
-//========================================================================================================================================================
-
-.spollers-block {
-	margin: 0px 0px 50px 0px;
-	// .spollers-block__item
-	&__item {
-		margin: 0px 0px 20px 0px;
-		&:last-child {
-			margin: 0px 0px 0px 0px;
-		}
-	}
-	// .spollers-block__title
-	&__title {
-		background-color: #794f45;
-		cursor: pointer;
-		padding: 20px 70px 20px 20px;
-		position: relative;
-		&::before {
-			content: "";
-			width: 20px;
-			background-color: #fff;
-			height: 2px;
-			transition: transform 0.3s ease 0s;
-			transform: translate(0, -50%) rotate(-45deg);
-			position: absolute;
-			right: 15px;
-			top: 50%;
-		}
-		&::after {
-			content: "";
-			width: 20px;
-			background-color: #fff;
-			height: 2px;
-			transition: transform 0.3s ease 0s;
-			transform: translate(0, -50%) rotate(45deg);
-			position: absolute;
-			right: 29px;
-			top: 50%;
-		}
-		&._active {
-			&::before {
-				transform: translate(0, -50%) rotate(45deg);
-			}
-			&::after {
-				transform: translate(0, -50%) rotate(-45deg);
-			}
-		}
-	}
-	// .spollers-block__body
-	&__body {
-		display: none;
-		padding: 20px 0px 0px 0px;
-	}
-}
-//========================================================================================================================================================
-
-.form {
-	margin: 0px 0px 50px 0px;
-	// .form__line
-	&__line {
-		margin: 0px 0px 20px 0px;
-	}
-	// .form__label
-	&__label {
-		display: inline-block;
-		margin: 0px 0px 15px 0px;
-	}
-}
-
-//========================================================================================================================================================
-.slider {
-	margin: 0px 0px 50px 0px;
-}
-//========================================================================================================================================================
-.text {
-	transform: translate(0px, 100px);
-	opacity: 0;
-	transition: all 0.3s ease 0s;
-	margin: 0px 0px 50px 0px;
-	a {
-		color: red;
-	}
-	&._active {
-		transform: translate(0px, 0px);
-		opacity: 1;
-	}
-}
-
-//========================================================================================================================================================
-
-.price {
-	// .price__range
-	&__range {
-	}
-	// .price__inputs
-	&__inputs {
-		display: flex;
-		input {
-			margin: 0px 10px 0px 0px;
-		}
-	}
-}
-
-//========================================================================================================================================================
-.gallery-block {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0px -10px;
-	// .gallery-block__item
-	&__item {
-		flex: 0 1 33.333%;
-		margin: 0px 0px 20px 0px;
-		padding: 0px 10px;
-		img {
-			max-width: 100%;
-		}
-	}
-}
-
-//</ОСНОВНОЙ БЛОК>====================================================================================================

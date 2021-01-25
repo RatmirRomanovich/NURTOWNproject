@@ -1,43 +1,86 @@
 //====================================================================================================
-.header {
-	// background-color: #fff;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	padding: 20px;
-	z-index: 50;
-	// .header__content
-	&__content {
-	}
-	// .header__menu
-	&__menu {
-	}
-}
-.menu {
-	// .menu__icon
-	&__icon {
-	}
-	// .menu__body
-	&__body {
-	}
-	// .menu__list
-	&__list {
-		display: flex;
-		li {
-			margin: 0px 15px 0px 0px;
-		}
-	}
-	// .menu__link
-	&__link {
-		color: #000;
-		&._active {
-			color: red;
-		}
-	}
-}
-.icon-menu {
+.header {}
+
+.header__container {
+	max-width: $maxWidthContainer + 20 + px;
+	padding: 0px 10px;
+	margin: 0 auto;
 }
 
+.header__inner {
+	min-height: 100px;
+	@extend %flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo-link {}
+
+.header__logo {}
+
+.header__menu {
+	@media (min-width: $maxWidthContainer + px){
+		margin-right: 125px;
+	}
+}
+
+.menu {}
+
+.menu__icon {}
+
+.icon-menu {}
+
+.menu__body {}
+
+.menu__list {
+	@extend %flex;
+}
+
+.menu__list li + li {
+	margin-left: 60px;
+}
+
+.menu__link {
+	position: relative;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 0.2em;
+	color: $palette-primary-text;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: -4px;
+		width: 0;
+		height: 1px;
+		background-color: $background-decor-line;
+		transition: all .3s;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -4px;
+		width: 0;
+		height: 1px;
+		background-color: $background-decor-line;
+		transition: all .5s;
+	}
+	@media (min-width: $md2 + px){
+		&:hover {
+			&::before {
+				width: 100%;
+			}
+	
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
 //====================================================================================================
 
 /*

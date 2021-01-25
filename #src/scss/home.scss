@@ -1,3 +1,381 @@
 //====================================================================================================
+//* section TOP start=================================================================================
+.home-top {}
+
+.home-top__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.home-top__control-row {
+	position: relative;
+}
+
+.home-top__title {
+	margin-bottom: 90px;
+}
+
+.home-top__control {
+	display: flex;
+	align-items: center;
+}
+
+.control-arrow {
+	width: 53px;
+	height: 53px;
+	background-color: #fff;
+	transition: all .3s;
+	border: 1px solid $palette-primary-border;
+	position: relative;
+
+	& img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+	}
+
+	@media (min-width: $md2 + px) {
+		&:hover {
+			background-color: $palette-primary-button-hover;
+		}
+	}
+}
+
+.control-arrow__left {
+	margin-right: 22px;
+}
+
+.control-arrow__right {}
+
+.home-top__decor-line {
+	position: absolute;
+	right: -70px;
+	width: 271px;
+	height: 1px;
+	background-color: $palette-primary-border;
+}
+
+
+.control-number {}
+
+.home-top__slide-box {
+	width: 100%;
+	max-width: 770px;
+}
+
+.slider {}
+
+._swiper {}
+
+.slider__slide {}
+
+//* section TOP end===================================================================================
+
+//* section Company===================================================================================
+
+.home-company {}
+
+.home-company__inner {
+	@extend %flex;
+	background-color: $background-secondary-section;
+	padding: 30px 0px 0px 70px;
+}
+
+.home-company__images-row {
+	@extend %flex;
+	align-items: center;
+}
+
+
+
+.home-company__box-first {
+	padding: 0px 30px 0px 0px;
+}
+
+.home-company__image-2 {
+	transform: translate(0, 30px);
+}
+
+.home-company__box-second {}
+
+.home-company__desc {
+	padding: 0px 70px 30px 30px;
+}
+
+.home-company__subtitle {}
+
+.subtitle {}
+
+.home-company__text {
+	margin-bottom: 20px;
+}
+
+.text {}
+
+.home-company__button {}
+
+.button-link {}
+
+//* section Company END===================================================================================
+
+//* section Task===================================================================================
+.home-tasks {}
+
+.home-tasks__subtitle {
+	text-align: left;
+	margin-bottom: $margin-secondary-subtitle;
+}
+
+.home-tasks__row {
+	@extend %flex;
+	margin: 0px -95px;
+}
+
+.home-tasks__desc {
+	@extend %flex;
+	padding: 0px 95px;
+}
+
+.home-tasks__text {
+	margin-left: 30px;
+	color: $palette-primary-text;
+	font-size: 22px;
+	line-height: 1.5;
+}
+
+.home-tasks__text-1 {
+	width: 280px;
+}
+
+.home-tasks__text-2 {
+	width: 420px;
+}
+
+//* section Task END===================================================================================
+
+//* section Project ===================================================================================
+.home-project {}
+
+.container {}
+
+.home-project__subtitle {
+	margin-bottom: $margin-secondary-subtitle;
+}
+
+.home-project__images-items {
+	@extend %flex;
+	flex-wrap: wrap;
+	margin: -15px;
+}
+
+.home-project__images-item {
+	padding: 15px;
+
+	&:hover .home-project__layer {
+		visibility: visible;
+		opacity: .8;
+		transform: scaley(1);
+	}
+}
+
+.home-project__images-inner {
+	position: relative;
+	height: 255px;
+}
+
+.home-project__images-size-1,
+.home-project__images-size-2 {
+	width: 570px;
+	font-size: 64px;
+}
+
+.home-project__images-size-3 {
+	width: 270px;
+	font-size: 30px;
+}
+
+.home-project__images-size-4 {
+	width: 470px;
+	font-size: 30px;
+}
+
+.home-project__images-size-5 {
+	width: 370px;
+	font-size: 30px;
+}
+
+
+
+.home-project__layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	padding: 8.4% 13.8%;
+	@extend %flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	transition: all .5s;
+	transform: scaley(0);
+	visibility: hidden;
+	opacity: 0;
+}
+
+.home-project__desc {
+	line-height: 1;
+	color: $palette-secondary-text;
+	font-weight: $fontWeightDemiBold;
+	margin-bottom: 20px;
+}
+
+.home-project__link {
+	font-size: 20px;
+	color: $palette-secondary-text;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	justify-content: center;
+	margin: 0px -8px;
+
+	& span {
+		padding: 0px 8px;
+	}
+}
+
+.home-project__button-inner {
+	@extend %flex;
+	justify-content: flex-end;
+	padding: 30px 8px 0px;
+	width: 100%;
+}
+
+.home-project__span-bg {
+	width: 18px;
+	height: 9px;
+	background: transparent url('../img/icons/arrow.svg') center center no-repeat;
+}
+
+//* section Project END===================================================================================
+
+//* section Feedback ===================================================================================
+.home-feedback {}
+
+.container {}
+
+.home-feedback__subtitle {}
+
+.subtitle {}
+
+.home-feedback__row {
+	@extend %flex;
+	margin: 0px -15px;
+}
+
+//form==========================
+.form {
+	flex: 0 0 391px;
+	padding: 0px 15px;
+}
+
+.form__body {}
+
+.form__item {}
+
+.form__item+.form__item {
+	margin-top: 10px;
+}
+
+.form__input {
+	background: $background-primary-form;
+
+	font-size: 14px;
+	line-height: 17px;
+	letter-spacing: 0.04em;
+
+	color: $palette-primary-text-form;
+
+	width: 100%;
+	padding: 15px 15px 15px 21px;
+}
+
+.form__input-checkbox {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.form__input-checkbox+label {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+}
+
+.form__input-checkbox+label::before {
+	content: '';
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	border-radius: 4px;
+	margin-right: 15px;
+	background-color: $background-primary-form;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 50% 50%;
+}
+
+.form__input-checkbox:hover+label::before {
+	background-color: darken($background-primary-form, 10%);
+}
+
+.form__input-checkbox:checked+label::before {
+
+	background-image: url("../img/icons/check.svg");
+}
+
+
+.form__input-textarea {
+	height: 147px;
+	resize: none;
+}
+
+.checkbox__label {
+	margin-bottom: 21px;
+}
+
+.form-label__span {
+	font-size: 14px;
+	line-height: 17px;
+	letter-spacing: 0.02em;
+	color: $palette-primary-text;
+}
+
+.form__button {
+	margin: 0px 0px;
+}
+
+.button-link {}
+
+.button-link--black {}
+
+.button-link__span {}
+
+.button-link__span-bg {}
+
+.home-feedback__images {
+	flex: 1 1 auto;
+	max-height: 372px;
+	padding: 0px 15px;
+}
+
+//* section Feedback END===================================================================================
 
 //====================================================================================================

@@ -7,7 +7,66 @@
 		<div class="wrapper">
 			@@include('_header.html',{})
 			<main class="page">
-				<h1>contacts!!!!!!!!</h1>
+				<section class="contacts-page">
+				
+					<div class="contacts-page__container">
+						<div class="contacts-page__inner">
+							<div class="contacts-page__desc">
+								<h1 class="contacts-page__title title">КОНТАКТНАЯ<br> <span class="title__span">ИНФОРМАЦИЯ</span></h1>
+								<a class="contacts-page__link-adress" href="#">«Digital Project»<br><span>г. Караганда, ул. Телевизионная 10</span></a>
+								<a class="contacts-page__link-phone" href="tel:+77017776811">+7 (701) 77 76 811</a>
+								<a class="contacts-page__link-mail" href="mailto:Galym.sultanov@mail.ru">Galym.sultanov@mail.ru</a>
+
+								<a class="contacts-page__button button-link" href="#">Орабтная связь</a>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- popup -->
+					<div class="popup">
+						<div class="popup__container">
+							<h4 class="popup-contact__title">Задать вопрос</h4>
+							<a href="#" class="popup__link-close"><img src="img/icons/close2.svg" alt="close"></a>
+
+							<!-- form -->
+							<div class="form">
+								<form class="form__body" action="#" id="form">
+
+									<div class="form__item">
+										<input class="form__input" type="text" name="name" placeholder="Имя">
+									</div>
+
+									<div class="form__item">
+										<input class="form__input" type="tel" name="phone" placeholder="Номер телефона*">
+									</div>
+
+									<div class="form__item">
+										<input class="form__input" type="email" name="email" placeholder="E-mail*">
+									</div>
+
+									<div class="form__item">
+										<input class="form__input" type="text" name="product" placeholder="Интересующий товар/услуга">
+									</div>
+
+									<div class="form__item">
+										<textarea class="form__input" name="message" placeholder="Сообщение*"></textarea>
+									</div>
+
+									<div class="form__item">
+										<input class="form__input" id="check" type="checkbox" name="checkbox" value="Согласие с политикой конфиденциальности">
+										<label class="checkbox__label" for="check" ><span>Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</span></label>
+									</div>
+
+									<button class="form__button" type="submit">Отправить <img src="img/icons/arrow.svg" alt="foto"></button>
+								</form>
+							</div>
+							<!-- form -->
+
+						</div>	
+					</div>				
+					<!-- popup -->
+				</section>
 			</main>
 			@@include('_footer.html',{})
 		</div>

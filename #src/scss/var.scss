@@ -1,0 +1,53 @@
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1170;
+$md1: $maxWidthContainer+10;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+//внутренние
+$x-color-white:#fff;
+$x-color-33: #333;
+$x-color-F2: #F2F2F2;
+$x-color-F3: #F3F3F3;
+$x-color-F9: #F9F9F9;
+$x-color-BD: #BDBDBD;
+$x-color-8D: #8D8D8D;
+$x-color-FB: #FBFBFB;
+
+$x-margin-20: 20px;
+$x-margin-60: 60px;
+
+//глобальные
+$fontWeightExtraLight:300;
+$fontWeightLight:400;
+$fontWeightRegular:500;
+$fontWeightDemiBold:700;
+
+$palette-primary-text: $x-color-33;
+$palette-secondary-text: $x-color-white;
+$palette-primary-text-form: $x-color-8D;
+$palette-primary-title: $x-color-BD;
+$palette-secondary-title: $x-color-33;
+
+$palette-primary-border: $x-color-F2;
+
+$palette-primary-button-hover: $x-color-F2;
+
+$background-primary-section: $x-color-white;
+$background-secondary-section: $x-color-FB;
+
+$background-decor-line: $x-color-33;
+
+$background-primary-button: $x-color-white;
+$background-secondary-button: $x-color-33;
+
+$background-primary-form: $x-color-F3;
+
+$margin-primary-subtitle: $x-margin-20;
+$margin-secondary-subtitle: $x-margin-60;
+
+%flex {
+	display: flex;
+}
