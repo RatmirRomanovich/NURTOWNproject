@@ -62,7 +62,19 @@ if (sliderScrollItems.length > 0) {
 
 function sliders_bild_callback(params) { }
 
-let sliderSlider = new Swiper('.slider', {
+//! slider home page
+let sliderSlider = new Swiper('.home-top__slider', {
+	navigation: {
+		nextEl: '.control-arrow__right',
+		prevEl: '.control-arrow__left',
+	},
+	keyboard: {
+		enabled: true,
+		onlyInViewport: true,
+		pageUpDown: true,
+	},
+	grabCursor: true,
+	loop: true,
 	/*
 	effect: 'fade',
 	autoplay: {
@@ -70,12 +82,22 @@ let sliderSlider = new Swiper('.slider', {
 		disableOnInteraction: false,
 	},
 	*/
-	observer: true,
-	observeParents: true,
+	// observer: true,
+	// observeParents: true,
 	slidesPerView: 1,
-	spaceBetween: 0,
-	autoHeight: true,
-	speed: 800,
+	// spaceBetween: 0,
+	// autoHeight: true,
+	speed: 1000,
+
+	effect: 'flip',
+
+	// Дополнение к flip
+	flipEffect: {
+		// Тень
+		slideShadows: true,
+		// Показ только активного слайда
+		limitRotation: true
+	},
 	//touchRatio: 0,
 	//simulateTouch: false,
 	//loop: true,
@@ -87,10 +109,6 @@ let sliderSlider = new Swiper('.slider', {
 	//	clickable: true,
 	//},
 	// Arrows
-	navigation: {
-		nextEl: '.about__more .more__item_next',
-		prevEl: '.about__more .more__item_prev',
-	},
 	/*
 	breakpoints: {
 		320: {
@@ -123,9 +141,61 @@ let sliderSlider = new Swiper('.slider', {
 	//},
 });
 
+//! slider Project page
 
-tippy('.tippy', {
-	content: "I'm a Tippy tooltip!",
+let sliderProject = new Swiper('.project-page__slider', {
+	navigation: {
+		nextEl: '.control-arrow__right',
+		prevEl: '.control-arrow__left',
+	},
+	slidesPerView: 1,
+	speed: 800,
+
+	effect: 'fade',
+	fadeEffect: {
+		crossFade: true
+	},
+	on: {
+		lazyImageReady: function () {
+			ibg();
+		},
+	}
+});
+
+//! slider Certificates page
+
+let sliderCertificates = new Swiper('.certificates-page__slider', {
+	effect: 'coverflow',
+
+
+	coverflowEffect: {
+
+		rotate: 30,
+
+		stretch: 50,
+
+		slideShadows: true,
+	},
+	loop: true,
+	navigation: {
+		nextEl: '.control-arrow__right',
+		prevEl: '.control-arrow__left',
+	},
+	grabCursor: true,
+	keyboard: {
+		enabled: true,
+		onlyInViewport: true,
+		pageUpDown: true,
+	},
+
+	slidesPerView: 3,
+	speed: 800,
+	
+	on: {
+		lazyImageReady: function () {
+			ibg();
+		},
+	}
 });
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");

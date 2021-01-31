@@ -1,0 +1,30 @@
+.gallery-page {}
+
+.gallery-page__title {
+	margin: 64px 0px 40px 0px;
+}
+
+.title {}
+
+.title__span {}
+
+.gallery-page__box {
+	border-top: 1px solid $palette-primary-border;
+	padding: 30px 0px 0px 0px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: -10px;
+}
+
+._gallery {}
+
+.gallery-page__item {
+	flex: 0 0 210px;
+	padding: 0px 0px 260px 0px;
+	margin: 10px;
+}
+
+.image-gallery {}
+

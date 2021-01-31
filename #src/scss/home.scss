@@ -64,14 +64,13 @@
 
 .home-top__slide-box {
 	width: 100%;
+	min-width: 0px;
 	max-width: 770px;
 }
 
-.slider {}
-
-._swiper {}
-
-.slider__slide {}
+.home-top__slide {
+	padding: 0px 0px 107.7% 0px;
+}
 
 //* section TOP end===================================================================================
 

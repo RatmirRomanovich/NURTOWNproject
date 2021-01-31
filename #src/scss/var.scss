@@ -8,6 +8,7 @@ $md4: 479.98;
 
 //внутренние
 $x-color-white:#fff;
+$x-color-black:#000;
 $x-color-33: #333;
 $x-color-F2: #F2F2F2;
 $x-color-F3: #F3F3F3;
@@ -27,6 +28,7 @@ $fontWeightDemiBold:700;
 
 $palette-primary-text: $x-color-33;
 $palette-secondary-text: $x-color-white;
+$palette-description-text: $x-color-black;
 $palette-primary-text-form: $x-color-8D;
 $palette-primary-title: $x-color-BD;
 $palette-secondary-title: $x-color-33;
@@ -50,4 +52,11 @@ $margin-secondary-subtitle: $x-margin-60;
 
 %flex {
 	display: flex;
+}
+
+%margin-title {
+	margin: 64px 0px 30px 0px;
+	@media (max-width: $md1+px) {
+		margin: 30px 0px 20px 0px;
+	}
 }

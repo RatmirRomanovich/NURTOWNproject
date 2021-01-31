@@ -1,0 +1,26 @@
+
+.certificates-page {}
+
+.container {}
+
+.certificates-page__title {
+	@extend %margin-title;
+}
+
+.certificates-page__slider-box {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.certificates-page__slider {}
+
+.certificates-page__slide {}
+
+.certificates-page__control {
+	margin-top: 30px;
+	@extend %flex;
+}
+
+.control-number {}
+

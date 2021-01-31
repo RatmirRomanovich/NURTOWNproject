@@ -44,6 +44,7 @@ body {
 	font-weight: $fontWeightLight;
 	line-height: 1.2;
 	background-color: $background-primary-section;
+	overflow-x: hidden;
 
 	&._lock {
 		overflow: hidden;
@@ -54,12 +55,12 @@ body {
 
 //<ОБОЛОЧКА>===========================================================================================================
 .wrapper {
-	width: 100%;
+	width: 100%; 
 	min-height: 100%;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-
+	
 	&._loaded {}
 }
 
@@ -67,106 +68,113 @@ body {
 
 //<Общии стили>===========================================================================================================
 .container {
-	max-width: $maxWidthContainer + 20 + px;
 	padding: 0px 10px 120px;
-	margin: 0 auto;
+	max-width: $maxWidthContainer + 20 + px;
+	margin: 0 auto;  
+	@media (max-width: $md3+px) {
+		padding: 0px 10px 60px;
+	}
 	// @media (max-width: $md1+px) {
-	// 	max-width: 970px;
-	// }
-	// @media (max-width: $md2+px) {
-	// 	max-width: 750px;
-	// }
+		// 	max-width: 970px;
+		// }
+		// @media (max-width: $md2+px) {
+			// 	max-width: 750px;
+			// }
 	// @media (max-width: $md3+px) {
-	// 	max-width: none;
-	// 	padding: 0 10px;
-	// }
-}
-
-a {
-	color: inherit;
-	font-family: inherit;
-}
-
-.page {
-	flex: 1 1 auto;
-}
-
-//title-subtitle
-.title {
-	font-weight: $fontWeightExtraLight;
-	font-size: 64px;
-	line-height: 1;
-	color: $palette-primary-title;
-}
-
-.title__span {
-	font-weight: $fontWeightDemiBold;
-	color: $palette-secondary-title;
-}
-
-.subtitle {
-	font-weight: $fontWeightExtraLight;
-	font-size: 64px;
-	line-height: 1;
-	color: $palette-primary-title;
-	margin-bottom: $margin-primary-subtitle;
-}
-
-//button
-.button-link {
-	display: inline-flex;
-	align-items: center;
-	cursor: pointer;
-	background-color: $background-primary-button;
-	justify-content: center;
-	padding: 30px 65px;
-	margin: 0px -8px;
-	transition: all .3s;
-
-	font-weight: $fontWeightLight;
-	font-size: 12px;
-	line-height: 12px;
-	letter-spacing: 0.2em;
-	text-transform: uppercase;
-
-	& span {
-		padding: 0px 8px;
+		// 	max-width: none;
+		// 	padding: 0 10px;
+		// }
+	}
+	
+	a {
+		color: inherit;
+		font-family: inherit;
 	}
 
-	&:hover {
-		background: $palette-primary-button-hover;
+	.page {
+		flex: 1 1 auto;
 	}
-}
-
-.button-link__span {}
-
-.button-link__span-bg {
-	width: 18px;
-	height: 9px;
-	background: transparent url('../img/icons/arrowGray.svg') center center no-repeat;
-}
-
-
-.button-link--black {
-	padding: 30px 39px;
-	background-color: $background-secondary-button;
-
-	& span {
-		color: #fff;
+	
+	//title-subtitle
+	.title {
+		font-weight: $fontWeightExtraLight;
+		font-size: 64px;
+		line-height: 1;
+		color: $palette-primary-title;
+		text-transform: uppercase;
+		@media (max-width: $md3+px) {
+			font-size: 35px;
+		}
 	}
-
-	& .button-link__span-bg {
+	
+	.title__span {
+		font-weight: $fontWeightDemiBold;
+		color: $palette-secondary-title;
+	}
+	
+	.subtitle {
+		font-weight: $fontWeightExtraLight;
+		font-size: 64px;
+		line-height: 1;
+		color: $palette-primary-title;
+		margin-bottom: $margin-primary-subtitle;
+	}
+	
+	//button
+	.button-link {
+		display: inline-flex;
+		align-items: center;
+		cursor: pointer;
+		background-color: $background-primary-button;
+		justify-content: center;
+		padding: 30px 65px;
+		margin: 0px -8px;
+		transition: all .3s;
+		
+		font-weight: $fontWeightLight;
+		font-size: 12px;
+		line-height: 12px;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		
+		& span {
+			padding: 0px 8px;
+		}
+		
+		&:hover {
+			background: $palette-primary-button-hover;
+		}
+	}
+	
+	.button-link__span {}
+	
+	.button-link__span-bg {
 		width: 18px;
 		height: 9px;
-		background: transparent url('../img/icons/arrow.svg') center center no-repeat;
+		background: transparent url('../img/icons/arrowGray.svg') center center no-repeat;
 	}
+	
+	
+	.button-link--black {
+		padding: 30px 39px;
+		background-color: $background-secondary-button;
+		
+		& span {
+			color: #fff;
+		}
 
-	&:hover {
-		background: darken($palette-primary-button-hover, 50%);
+		& .button-link__span-bg {
+			width: 18px;
+			height: 9px;
+			background: transparent url('../img/icons/arrow.svg') center center no-repeat;
+		}
+		
+		&:hover {
+			background: darken($palette-primary-button-hover, 50%);
+		}
 	}
-}
-
-// .button-link {
+	
+	// .button-link {
 // 	display: inline-block;
 // 	cursor: pointer;
 // 	font-size: 12px;
@@ -179,44 +187,40 @@ a {
 // 	padding: 30px 65px;
 
 // 	&:hover {
-// 		letter-spacing: 0.3em;
-// 	}
-
-// 	& .button-link-icon {
-// 		position: relative;
-// 		right: -7px;
-// 	}
-
-// 	&:hover .button-link-icon {
-// 		transform: translate3d(4px, 0, 0);
-// 	}
-// }
-
-//</Общии стили>===========================================================================================================
-
-//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
-// @import "forms";
-@import "ui";
-//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
-
-//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
-// @import "datepicker";
-// @import "lightgallery";
-// @import "tippy";
-@import "nouislider";
-// @import "popup";
-@import "header";
-
-@import "footer";
-
-@import "home";
-
-@import "galleryPage";
-
-@import "projectPage";
-
-@import "certificatesPage";
-
-@import "contactsPage";
-
-//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+	// 		letter-spacing: 0.3em;
+	// 	}
+	
+	// 	& .button-link-icon {
+		// 		position: relative;
+		// 		right: -7px;
+		// 	}
+		
+		// 	&:hover .button-link-icon {
+			// 		transform: translate3d(4px, 0, 0);
+			// 	}
+			// }
+			
+			//</Общии стили>===========================================================================================================
+			
+			//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+			@import "ui";
+			//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+			
+			//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+			@import "lightgallery";
+			
+			@import "header";
+			
+			@import "footer";
+			
+			@import "home";
+			
+			@import "galleryPage";
+			
+			@import "projectPage";
+			
+			@import "certificatesPage";
+			
+			@import "contactsPage";
+			
+			//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
