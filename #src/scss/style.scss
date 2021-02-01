@@ -37,6 +37,10 @@ $fontFamily: "Hoves";
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
+html{
+	overflow-y: scroll;
+	
+}
 
 body {
 	color: #000;
@@ -72,7 +76,7 @@ body {
 	max-width: $maxWidthContainer + 20 + px;
 	margin: 0 auto;  
 	@media (max-width: $md3+px) {
-		padding: 0px 10px 60px;
+		padding: 80px 10px 60px;
 	}
 	// @media (max-width: $md1+px) {
 		// 	max-width: 970px;
