@@ -28,6 +28,7 @@
 
 .header__logo-link {
 	z-index: 101;
+	margin-left: 10px;
 }
 
 .header__logo {}
@@ -42,7 +43,9 @@
 
 .menu__icon {}
 
-.icon-menu {}
+.icon-menu {
+	margin-right: 10px;
+}
 
 .menu__body {}
 

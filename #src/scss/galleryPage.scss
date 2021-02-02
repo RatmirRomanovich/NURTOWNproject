@@ -1,7 +1,7 @@
 .gallery-page {}
 
 .gallery-page__title {
-	margin: 64px 0px 40px 0px;
+	@extend %margin-title;
 }
 
 .title {}
@@ -24,6 +24,11 @@
 	flex: 0 0 210px;
 	padding: 0px 0px 260px 0px;
 	margin: 10px;
+
+	@media (max-width: $md3+px) {
+		flex: 0 0 20%;
+		padding: 0px 0px 24.5% 0px;
+	}
 }
 
 .image-gallery {}

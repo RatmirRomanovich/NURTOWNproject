@@ -1,17 +1,55 @@
-<div class="popup popup_callback">
+<div class="popup popup_feedback">
 	<div class="popup__content">
 		<div class="popup__body">
 			<div class="popup__close"></div>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem officiis earum laudantium, adipisci reiciendis porro magni unde nostrum fuga inventore ipsum sunt minus dolorem repellendus illum aliquam blanditiis similique quaerat!
+				<div class="popup__title">Задать вопрос</div>
+										<!-- form -->
+										<div class="form form-popup">
+											<form class="form__body" action="#" id="form">
+							
+												<div class="form__item">
+													<input class="form__input" type="text" name="name" placeholder="Имя">
+												</div>
+			
+												<div class="form__item">
+													<input class="form__input" type="tel" name="phone" placeholder="Номер телефона*" required>
+												</div>
+			
+												<div class="form__item">
+													<input class="form__input" type="email" name="email" placeholder="E-mail*">
+												</div>
+			
+												<div class="form__item">
+													<input class="form__input" type="text" name="product" placeholder="Интересующий товар/услуга">
+												</div>
+			
+												<div class="form__item">
+													<textarea class="form__input form__input-textarea" name="message" placeholder="Сообщение*"></textarea>
+												</div>
+			
+												<div class="form__item">
+													<input class="form__input form__input-checkbox" id="check" type="checkbox" name="checkbox" value="Согласие с политикой конфиденциальности">
+													<label class="checkbox__label" for="check" >
+														<span class="form-label__span">Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</span>
+													</label>
+												</div>
+			
+												<button class="form__button form__button-popup" type="submit">
+													<span class="button-link__span">Отправить</span>
+												</button>
+												</form>
+								</div>
+								<!-- form -->
+
 		</div>
 	</div>
 </div>
 
-<div class="popup popup_video">
+<!-- <div class="popup popup_video">
 	<div class="popup__content">
 		<div class="popup__body">
 			<div class="popup__close popup__close_video"></div>
 			<div class="popup__video _video"></div>
 		</div>
 	</div>
-</div>
+</div> -->

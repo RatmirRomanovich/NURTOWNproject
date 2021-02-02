@@ -38,8 +38,10 @@ $fontFamily: "Hoves";
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
 html{
-	overflow-y: scroll;
-	
+	@media (max-width: $md3+px) {
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
 }
 
 body {
@@ -76,7 +78,7 @@ body {
 	max-width: $maxWidthContainer + 20 + px;
 	margin: 0 auto;  
 	@media (max-width: $md3+px) {
-		padding: 80px 10px 60px;
+		padding: 90px 10px 30px;
 	}
 	// @media (max-width: $md1+px) {
 		// 	max-width: 970px;
@@ -227,4 +229,5 @@ body {
 			
 			@import "contactsPage";
 			
+			@import "popup";
 			//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
