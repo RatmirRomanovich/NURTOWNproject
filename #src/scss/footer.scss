@@ -154,10 +154,8 @@ footer {}
 }
 
 .footer__social-box {
-	@extend %flex;
+	@extend %flexStandart;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
 }
 
 .footer__social-link+.footer__social-link {
@@ -166,6 +164,10 @@ footer {}
 
 .footer__social-link:hover {
 	box-shadow: -2px -2px 2px 2px rgba($x-color-white, 0.6) inset;
+}
+
+.footer__social-link:focus {
+	box-shadow: -2px -2px 2px 2px rgba($x-color-white, 0.9) inset;
 }
 
 

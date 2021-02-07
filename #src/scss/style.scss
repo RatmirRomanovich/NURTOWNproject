@@ -37,12 +37,6 @@ $fontFamily: "Hoves";
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
-html{
-	@media (max-width: $md3+px) {
-		overflow-y: scroll;
-		overflow-x: hidden;
-	}
-}
 
 body {
 	color: #000;
@@ -50,7 +44,6 @@ body {
 	font-weight: $fontWeightLight;
 	line-height: 1.2;
 	background-color: $background-primary-section;
-	overflow-x: hidden;
 
 	&._lock {
 		overflow: hidden;
@@ -61,12 +54,12 @@ body {
 
 //<ОБОЛОЧКА>===========================================================================================================
 .wrapper {
-	width: 100%; 
+	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	
+
 	&._loaded {}
 }
 
@@ -76,111 +69,147 @@ body {
 .container {
 	padding: 0px 10px 120px;
 	max-width: $maxWidthContainer + 20 + px;
-	margin: 0 auto;  
+	margin: 0 auto;
+
 	@media (max-width: $md3+px) {
 		padding: 90px 10px 30px;
 	}
+
 	// @media (max-width: $md1+px) {
-		// 	max-width: 970px;
-		// }
-		// @media (max-width: $md2+px) {
-			// 	max-width: 750px;
-			// }
+	// 	max-width: 970px;
+	// }
+	// @media (max-width: $md2+px) {
+	// 	max-width: 750px;
+	// }
 	// @media (max-width: $md3+px) {
-		// 	max-width: none;
-		// 	padding: 0 10px;
-		// }
+	// 	max-width: none;
+	// 	padding: 0 10px;
+	// }
+}
+
+a {
+	color: inherit;
+	font-family: inherit;
+}
+
+.page {
+	flex: 1 1 auto;
+}
+
+//title-subtitle
+.title {
+	font-weight: $fontWeightExtraLight;
+	font-size: 64px;
+	line-height: 1;
+	color: $palette-primary-title;
+	text-transform: uppercase;
+
+	@media (max-width: $md3+px) {
+		font-size: 35px;
 	}
-	
-	a {
-		color: inherit;
-		font-family: inherit;
+}
+
+.title__span {
+	font-weight: $fontWeightDemiBold;
+	color: $palette-secondary-title;
+}
+
+.subtitle {
+	font-weight: $fontWeightExtraLight;
+	@include adaptiv-font(64, 20, 64);
+	line-height: 1;
+	color: $palette-primary-title;
+	margin-bottom: $margin-primary-subtitle;
+
+	transform: translateY(100px);
+	opacity: 0;
+	transition: all 0.4s;
+
+	&._active {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+//button
+.button-link {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	background-color: $background-primary-button;
+	justify-content: center;
+	padding: 30px 65px;
+	margin: 0px -8px;
+	transition: all .3s;
+
+	font-weight: $fontWeightLight;
+	font-size: 12px;
+	line-height: 12px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+
+	& span {
+		padding: 0px 8px;
 	}
 
-	.page {
-		flex: 1 1 auto;
+	&:hover {
+		background: $palette-primary-button-hover;
 	}
-	
-	//title-subtitle
-	.title {
-		font-weight: $fontWeightExtraLight;
-		font-size: 64px;
-		line-height: 1;
-		color: $palette-primary-title;
-		text-transform: uppercase;
-		@media (max-width: $md3+px) {
-			font-size: 35px;
-		}
+
+	&:focus {
+		background: darken($palette-primary-button-hover, 10%);
 	}
-	
-	.title__span {
-		font-weight: $fontWeightDemiBold;
-		color: $palette-secondary-title;
+
+	@media (max-width: $md3+px) {
+		padding: 15px 30px;
 	}
-	
-	.subtitle {
-		font-weight: $fontWeightExtraLight;
-		font-size: 64px;
-		line-height: 1;
-		color: $palette-primary-title;
-		margin-bottom: $margin-primary-subtitle;
+}
+
+.button-link__span {}
+
+.button-link__span-bg {
+	width: 18px;
+	height: 9px;
+	background: transparent url('../img/icons/arrowGray.svg') center center no-repeat;
+}
+
+
+.button-link--black {
+	padding: 30px 39px;
+	background-color: $background-secondary-button;
+
+	& span {
+		color: #fff;
 	}
-	
-	//button
-	.button-link {
-		display: inline-flex;
-		align-items: center;
-		cursor: pointer;
-		background-color: $background-primary-button;
-		justify-content: center;
-		padding: 30px 65px;
-		margin: 0px -8px;
-		transition: all .3s;
-		
-		font-weight: $fontWeightLight;
-		font-size: 12px;
-		line-height: 12px;
-		letter-spacing: 0.2em;
-		text-transform: uppercase;
-		
-		& span {
-			padding: 0px 8px;
-		}
-		
-		&:hover {
-			background: $palette-primary-button-hover;
-		}
-	}
-	
-	.button-link__span {}
-	
-	.button-link__span-bg {
+
+	& .button-link__span-bg {
 		width: 18px;
 		height: 9px;
-		background: transparent url('../img/icons/arrowGray.svg') center center no-repeat;
+		background: transparent url('../img/icons/arrow.svg') center center no-repeat;
 	}
-	
-	
-	.button-link--black {
-		padding: 30px 39px;
-		background-color: $background-secondary-button;
-		
-		& span {
-			color: #fff;
-		}
 
-		& .button-link__span-bg {
-			width: 18px;
-			height: 9px;
-			background: transparent url('../img/icons/arrow.svg') center center no-repeat;
-		}
-		
-		&:hover {
-			background: darken($palette-primary-button-hover, 50%);
-		}
+	&:hover {
+		background: lighten($background-secondary-button, 10%);
 	}
-	
-	// .button-link {
+
+	&:focus {
+		background: lighten($background-secondary-button, 20%);
+	}
+
+	@media (max-width: $md3+px) {
+		padding: 15px 20px;
+	}
+}
+
+
+.not-active {
+	pointer-events: none;
+	cursor: default;
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+// .button-link {
 // 	display: inline-block;
 // 	cursor: pointer;
 // 	font-size: 12px;
@@ -193,41 +222,41 @@ body {
 // 	padding: 30px 65px;
 
 // 	&:hover {
-	// 		letter-spacing: 0.3em;
-	// 	}
-	
-	// 	& .button-link-icon {
-		// 		position: relative;
-		// 		right: -7px;
-		// 	}
-		
-		// 	&:hover .button-link-icon {
-			// 		transform: translate3d(4px, 0, 0);
-			// 	}
-			// }
-			
-			//</Общии стили>===========================================================================================================
-			
-			//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
-			@import "ui";
-			//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
-			
-			//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
-			@import "lightgallery";
-			
-			@import "header";
-			
-			@import "footer";
-			
-			@import "home";
-			
-			@import "galleryPage";
-			
-			@import "projectPage";
-			
-			@import "certificatesPage";
-			
-			@import "contactsPage";
-			
-			@import "popup";
-			//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+// 		letter-spacing: 0.3em;
+// 	}
+
+// 	& .button-link-icon {
+// 		position: relative;
+// 		right: -7px;
+// 	}
+
+// 	&:hover .button-link-icon {
+// 		transform: translate3d(4px, 0, 0);
+// 	}
+// }
+
+//</Общии стили>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "ui";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "lightgallery";
+
+@import "header";
+
+@import "footer";
+
+@import "home";
+
+@import "galleryPage";
+
+@import "projectPage";
+
+@import "certificatesPage";
+
+@import "contactsPage";
+
+@import "popup";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================

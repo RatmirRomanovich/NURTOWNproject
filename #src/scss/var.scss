@@ -63,3 +63,11 @@ $margin-secondary-subtitle: $x-margin-60;
 		margin: 0px 0px 20px 0px;
 	}
 }
+
+
+
+%flexStandart {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

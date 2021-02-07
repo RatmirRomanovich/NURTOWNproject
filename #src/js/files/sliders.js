@@ -147,10 +147,16 @@ let sliderProject = new Swiper('.project-page__slider', {
 	},
 	slidesPerView: 1,
 	speed: 800,
-
+	loop: true,
 	effect: 'fade',
 	fadeEffect: {
 		crossFade: true
+	},
+	grabCursor: true,
+	keyboard: {
+		enabled: true,
+		onlyInViewport: true,
+		pageUpDown: true,
 	},
 	on: {
 		lazyImageReady: function () {
@@ -174,6 +180,7 @@ let sliderCertificates = new Swiper('.certificates-page__slider', {
 		slideShadows: true,
 	},
 	loop: true,
+	centeredSlides: true,
 	navigation: {
 		nextEl: '.control-arrow__right',
 		prevEl: '.control-arrow__left',
@@ -185,9 +192,20 @@ let sliderCertificates = new Swiper('.certificates-page__slider', {
 		pageUpDown: true,
 	},
 
-	slidesPerView: 3,
+	slidesPerView: 1,
 	speed: 800,
-	
+
+	breakpoints: {
+		600: {
+			slidesPerView: 2,
+		},
+
+		992: {
+			slidesPerView: 3,
+		},
+	},
+
+		
 	on: {
 		lazyImageReady: function () {
 			ibg();

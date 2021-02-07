@@ -5,6 +5,9 @@
 
 .certificates-page__title {
 	@extend %margin-title;
+	@media (max-width: $md3+px) {
+		text-align: center;
+	}
 }
 
 .certificates-page__slider-box {
@@ -15,11 +18,21 @@
 
 .certificates-page__slider {}
 
-.certificates-page__slide {}
+.certificates-page__slide {
+	width: 340px;
+	height: 450px;
+	img {
+		object-fit: contain;
+	}
+}
 
 .certificates-page__control {
 	margin-top: 30px;
 	@extend %flex;
+	@media (max-width: $md4+px) {
+		margin-top: 5px;
+		justify-content: space-between;
+	}
 }
 
 .control-number {}

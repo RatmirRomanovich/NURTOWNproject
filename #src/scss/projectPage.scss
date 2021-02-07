@@ -4,6 +4,9 @@
 
 .project-page__title {
 	@extend %margin-title;
+	@media (max-width: 1220px) {
+		text-align: center;
+	}
 }
 
 .title {}
@@ -14,6 +17,9 @@
 	overflow: hidden;
 	padding: 30px 0px 60px 0px;
 	border-top: 1px solid $palette-primary-border;
+	@media (max-width: $md3+px) {
+		padding: 20px 0px 20px 0px;
+	}
 }
 
 .project-page__slider {}
@@ -22,6 +28,9 @@
 
 .project-page__item {
 	@extend %flex;
+	flex-wrap: wrap;
+	width: 100%;
+	min-height: 435px;
 }
 
 .project-page__item+.project-page__item {
@@ -29,20 +38,31 @@
 }
 
 .project-page__image {
-	width: 100%;
-	max-width: 670px;
+	flex: 1 1 670px;
+	@media (max-width: 1220px) {
+		flex: 1 1 100%;
+		padding-bottom: 40%;
+	}
 }
 
 .project-page__desc {
 	flex: 0 0 500px;
 	padding: 30px;
 	background: $background-secondary-section;
+	@media (max-width: 1220px) {
+		flex: 1 1 100%;
+	}
 }
 
 .project-page__subtitle {
 	font-weight: $fontWeightExtraLight;
-	font-size: 40px;
+	@include adaptiv-font(40,20,40);
 	line-height: 1.25;
+
+	@media (max-width: 1220px) {
+		text-align: center;
+	}
+
 }
 
 .subtitle {}
@@ -57,19 +77,20 @@
 
 .project-page__button {
 
-	&:hover {
-		background-color: $palette-primary-button-hover;
-	}
 }
 
 .button-link {}
 
-.button-link__span {}
+.button-link__span {
+}
 
 .button-link__span-bg {}
 
 .project-page__control {
 	@extend %flex;
+	@media (max-width: $md4+px) {
+		justify-content: space-between;
+	}
 }
 
 .control-arrow {}

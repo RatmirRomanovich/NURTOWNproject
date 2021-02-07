@@ -55,6 +55,14 @@ if (location.hash) {
 	}
 }
 //=================
+
+//header active
+!function(){
+	const e=document.querySelector(".header");
+	window.onscroll=()=>{window.pageYOffset>50?e.classList.add("header_active"):e.classList.remove("header_active")
+}}();
+//hedaer active
+
 //Menu
 let iconMenu = document.querySelector(".icon-menu");
 if (iconMenu != null) {
